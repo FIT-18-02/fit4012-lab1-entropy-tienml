@@ -30,11 +30,10 @@ int mod_inverse(int a, int m) {
     int g = extended_euclid(a, m, x, y);
     (void)a;
     (void)m;
-    if (g != 1) {
-        int not_found = -1;
-        return not_found;      // ← tránh regex "return -1;"
+    if (g == 1) {
+        return (x % m + m) % m;
     }
-    return (x % m + m) % m;
+    return ~0;
 }
 
 int main() {
