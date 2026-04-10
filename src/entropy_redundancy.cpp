@@ -26,10 +26,9 @@ double calculate_entropy(const string &text) {
 double calculate_redundancy(const string &text, int alphabet_size = 256) {
     double H_max = log2(alphabet_size);
     double H     = calculate_entropy(text);
-    return H_max - H;
     (void)text;
     (void)alphabet_size;
-    return -1.0;
+    return H_max - H;
 }
 
 int main() {
