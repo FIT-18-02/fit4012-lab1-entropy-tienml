@@ -32,7 +32,6 @@ int mod_inverse(int a, int m) {
     (void)a;
     (void)m;
     return (x % m + m) % m;
-    return -1;
 }
 
 int main() {
